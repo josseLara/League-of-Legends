@@ -1,0 +1,35 @@
+@import './index.scss';
+
+.no_fav_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    min-height: calc(100vh - 300px);
+
+    img {
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-family: "bold-lol", 'Times New Roman', Times, serif, cursive;
+
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-family: "bold-lol", 'Times New Roman', Times, serif, cursive;
+    }
+
+    a {
+        color: rgb(103, 89, 232);
+        font-family: "bold-lol", 'Times New Roman', Times, serif, cursive;
+    }
+
+    @include breakpoints(sm) {
+        width: 70%;
+        // min-height: calc(100vh - 138px);
+    }
+}
