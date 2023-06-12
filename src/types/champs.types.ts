@@ -3,5 +3,6 @@ export interface IChamps {
     title: string;
     image: string;
     tags: string[];
+    info: string[];
 }
 

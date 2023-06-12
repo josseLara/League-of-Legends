@@ -16,6 +16,7 @@ function ChampDetails() {
 
   useEffect(() => {
     getChampData(id).then(data => setChampData(Object.values(data)))
+    console.log('data',champData)
   }, [id])
 
   const handleSeeMore = () => {

@@ -6,7 +6,7 @@ import '../../styles/ChampsGrid.scss'
 
 function ChampsGrid(): JSX.Element {
   const champs = useSelector((state: AppStore) => state.champs)
-
+  console.log('cha',champs)
   return (
     <>
       {champs.length === 0
@@ -23,7 +23,8 @@ function ChampsGrid(): JSX.Element {
                   id={c.id}
                   image={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${c.id}_0.jpg`}
                   title={c.title}
-                  tags={c.tags}
+                  tags={c.tags} 
+                  info={Object.values(c.info)} 
                 />
               )
             })}

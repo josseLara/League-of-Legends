@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from 'react';
 /**
  * Component that display the card with the information of the champion 
  */
-function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
+function CardChamp({ id, image, title, tags, info }: IChamps): JSX.Element {
 
     const elementoRef = useRef()
     const [isIntersecting, setIsIntersecting] = useState(false)
@@ -31,7 +31,6 @@ function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
         }
 
     }, [])
-
 
     return (
         // <li key={id} className={`card_champ ${isIntersecting ? 'show' : 'hidden'}`} ref={elementoRef}>
@@ -64,7 +63,9 @@ function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
             <div className="card_champ_content">
                 <span className='card_champ_content_title'>{title}</span>
             </div>
-            <img src={image} className='card_champ_img' alt={image} />
+            <Link to={`/champions/${id}`} className='card_champ_link' id={id}>
+                <img src={image} className='card_champ_img' alt={image} />
+            </Link>
             <div className="card_champ_info">
                 <div className='card_champ_info_tags'>
                     {tags.map(tag => {
@@ -81,6 +82,35 @@ function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
                 </div>
                 <span className="card_champ_info_name">{splitName(id)}</span>
             </div>
+
+            <div className="card_champ_sidebar">
+                <div className="card_champ_sidebar_info">
+
+                    {
+                        ['ATK', 'DEF', 'MAG'].map((item, index) => {
+
+                            return (
+                                <div className="card_champ_sidebar_info_item" key={index}>
+                                    <p>{item}</p>
+                                    <span>{info[index]}</span>
+                                </div>
+                            )
+                        })
+                    }
+
+                </div>
+                <div className="card_champ_sidebar_dif">
+                    {/* <p>DIFFICULTY</p> */}
+                    <div className='card_champ_sidebar_dif_lines'>
+                        <span className="line"></span>
+                        <span className="line"></span>
+                        <span className="line inactive"></span>
+                    </div>
+                    <span>EASY</span>
+                </div>
+                <FavButton id={id} />
+            </div>
+
         </li>
     )
 }
