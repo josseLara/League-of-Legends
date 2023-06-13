@@ -263,6 +263,9 @@
     gap: 20px;
     padding-left: 20px;
 
+    h3{
+        font-size: 2rem;
+    }
     .spells-skill::after {
         content: '';
         width: 10px;
@@ -274,12 +277,14 @@
         margin-left: 10px;
     }
 
-    .spells_list{
+    .spells_list {
+        margin-top: 20px;
         display: flex;
         position: relative;
         gap: 120px;
         border-top: 1px solid #fff;
-        .spells_item::after{
+
+        .spells_item::after {
             content: '';
             position: absolute;
             top: -10px;
@@ -290,10 +295,55 @@
             border: 1px solid #fff;
             border-radius: 100%;
         }
-        .spells_item{
-            
+
+        .spells_item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_skill {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 10px;
+                margin-top: 20px;
+                border: 1px solid transparent;
+                
+                span {
+                    font-weight: 600;
+                    padding: 7px 5px 3px 5px;
+                    border-radius: 5px;
+                    font-size: .9rem;
+                    background-color: #CDBC8C;
+                }
+
+                img {
+                    width: 60px;
+                    border-radius: 3px;
+                }
+
+                &:hover {
+                    border-radius: 10px;
+                    border: 1px solid #4A397E;
+                    cursor: pointer;
+                }
+            }
         }
-        
+
+    }
+
+    .spells-name{
+        font-size: 1.5rem;
+        font-family: 'Nokora', sans-serif;
+
+    }
+
+    .spells-description{
+        font-size: 1rem;
+        font-family: 'Nokora', sans-serif;
+        max-width: 700px;
+
     }
 }
 

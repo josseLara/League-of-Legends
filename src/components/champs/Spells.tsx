@@ -71,19 +71,44 @@ export default function Spells({
     //   <h6 className='spells-name'>{currentName} <span className='spells-name_key'>{key}</span></h6>
     //   <p className='spells-description' dangerouslySetInnerHTML={{ __html: currentDescription }} />
     // </Box>
-    
-    <Box>
+
+    <Box sx={{display:'flex',flexDirection:'column',gap:'20px'}}>
       <ul className='spells_list'>
         <li className='spells_item'>
-          <img src={`${passiveImage}${passive}`} alt='passive' onClick={() => handleDescription(descriptionP, passiveName, 'PASSIVE')} alt="" />
+          <div className='spells_item_skill' onClick={() => handleDescription(descriptionP, passiveName, 'PASSIVE')}>
+            <img src={`${passiveImage}${passive}`} alt='passive' />
+            <span>Passive</span>
+          </div>
         </li>
-        <li className='spells_item'>
-          sas
+        <li className='spells_item' onClick={() => handleDescription(descriptionQ, nameQ, 'Q')}>
+          <div className='spells_item_skill'>
+            <img src={`${spellsImage}${spellQ}`} alt='Q' />
+            <span>Q</span>
+          </div>
         </li>
-        <li className='spells_item'>
-          sas
+        <li className='spells_item' onClick={() => handleDescription(descriptionW, nameW, 'W')}>
+          <div className='spells_item_skill'>
+            <img src={`${spellsImage}${spellW}`} alt='W' />
+            <span>W</span>
+          </div>
+        </li>
+
+        <li className='spells_item'  onClick={() => handleDescription(descriptionE, nameE, 'E')}>
+          <div className='spells_item_skill'>
+            <img src={`${spellsImage}${spellE}`} alt='E' />
+            <span>E</span>
+          </div>
+        </li>
+        <li className='spells_item' onClick={() => handleDescription(descriptionR, nameR, 'R')} >
+          <div className='spells_item_skill'>
+            <img src={`${spellsImage}${spellR}`} alt='R' />
+            <span>R</span>
+          </div>
         </li>
       </ul>
+
+      <h6 className='spells-name'>{currentName} <span className='spells-name_key'>{key}</span></h6>
+      <p className='spells-description' dangerouslySetInnerHTML={{ __html: currentDescription }} />
     </Box>
   );
 }
