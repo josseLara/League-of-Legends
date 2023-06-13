@@ -34,10 +34,9 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="fixed" sx={{ backgroundColor: "#1a1a1adf" }}>
+        <AppBar position="fixed" sx={{ background: 'linear-gradient(70.59deg, #242641 41.09%, #31334B 51.84%, rgba(54, 87, 128, 0.963458) 74.21%, rgba(0, 0, 0, 0) 81.19%, rgba(52, 145, 190, 0.4) 81.19%)' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <KeyboardOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -52,7 +51,7 @@ function ResponsiveAppBar() {
                             cursor: 'pointer',
                             fontFamily: "regular-lol",
                         }}>
-                        PORO.GANK
+                        Wiki Lol
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton

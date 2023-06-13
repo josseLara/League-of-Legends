@@ -13,7 +13,7 @@ function CardChamp({ id, image, title, tags, info }: IChamps): JSX.Element {
 
     const elementoRef = useRef()
     const [isIntersecting, setIsIntersecting] = useState(false)
-
+    let difficulty = parseInt(info[3]) < 3 ? 'LOW' : parseInt(info[3]) < 10 ? 'MODERATE' : 'HIGH';
     useEffect(() => {
         const elemento = elementoRef.current
         const observer = new IntersectionObserver(entries => {
@@ -33,32 +33,7 @@ function CardChamp({ id, image, title, tags, info }: IChamps): JSX.Element {
     }, [])
 
     return (
-        // <li key={id} className={`card_champ ${isIntersecting ? 'show' : 'hidden'}`} ref={elementoRef}>
-        //     <div className='card_champ_img'>
-        //         <Link to={`/champions/${id}`} className='card_champ_link' id={id}>
-        //             <img src={image} alt={image} />
-        //         </Link>
-        //         <FavButton id={id} />
-        //         <div className='card_champ_info'>
-        //             <div className='card_champ_info_name'>{splitName(id)}</div>
-        //             <div className='card_champ_info_title'> {title}</div>
-        //             <div className='card_champ_info_tags'>
-        //                 {tags.map(tag => {
-        //                     return (
-        //                         <Tooltip title={`${tag}`} arrow key={`${tag}`} >
-        //                             <img
-        //                                 src={`/tags/${tag}.png`}
-        //                                 alt={`${id + tag}`}
-        //                                 key={`${id + tag}`}
-        //                             />
-        //                         </Tooltip>
-        //                     )
-        //                 })}
-        //             </div>
-        //         </div>
-        //     </div>
-        // </li>
-        // ------------------------------------------------------------------------
+
         <li key={id} className={`card_champ ${isIntersecting ? 'show' : 'hidden'}`} ref={elementoRef}>
             <div className="card_champ_content">
                 <span className='card_champ_content_title'>{title}</span>
@@ -88,7 +63,6 @@ function CardChamp({ id, image, title, tags, info }: IChamps): JSX.Element {
 
                     {
                         ['ATK', 'DEF', 'MAG'].map((item, index) => {
-
                             return (
                                 <div className="card_champ_sidebar_info_item" key={index}>
                                     <p>{item}</p>
@@ -103,10 +77,10 @@ function CardChamp({ id, image, title, tags, info }: IChamps): JSX.Element {
                     {/* <p>DIFFICULTY</p> */}
                     <div className='card_champ_sidebar_dif_lines'>
                         <span className="line"></span>
-                        <span className="line"></span>
-                        <span className="line inactive"></span>
+                        <span className={`line ${difficulty == 'LOW'? 'inactive' :'' }`}></span>
+                        <span className={`line ${difficulty == 'MODERATE' || difficulty == 'LOW' ? 'inactive' :'' }`}></span>
                     </div>
-                    <span>EASY</span>
+                    <span>{difficulty}</span>
                 </div>
                 <FavButton id={id} />
             </div>

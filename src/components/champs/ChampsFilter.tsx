@@ -42,7 +42,7 @@ export function ChampsFilter() {
   const StyledButtonGroup = styled(ButtonGroup)({
     // change the button group dividers color
     '& .MuiButtonGroup-grouped:not(:last-of-type)': {
-      borderRight: '1.5px solid #6759e8'
+      borderRight: 'none'
     },
     '& .css-m97oia-MuiButtonBase-root-MuiButton-root:hover': {
       textDecoration: 'inherent'
@@ -54,15 +54,15 @@ export function ChampsFilter() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#6759e8',
+        main: '#67ACF0',
       }
     },
   });
 
 
   return (
-    <Box sx={{ marginBottom: '35px', width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
-      <Box sx={{ display: 'flex', flexWrap: "wrap", alignItems: 'flex-end', justifyContent: 'center', marginBottom: '20px', width: '100%', }}>
+    <Box sx={{ marginBottom: '35px', width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'row-reverse',flexWrap:'wrap',justifyContent:'start' }}>
+      <Box sx={{width:'100%', display: 'flex', flexWrap: "wrap", alignItems: 'flex-end', justifyContent: 'center', marginBottom: '20px' }}>
         <ThemeProvider theme={theme}>
           <OutlinedInput
             color='primary'
@@ -70,7 +70,7 @@ export function ChampsFilter() {
             onChange={(e) => setInput(e?.target?.value)}
             placeholder='Search champion'
             type='text'
-            sx={{ color: 'white', fontFamily: "bold-lol", border: '1.5px solid #6759e8', width: { md: '50%', xs: '80%' } }}
+            sx={{ color: 'white', fontFamily: "'Nokora', sans-serif", border: '1px solid #FFFFFF',borderRadius:'20px', width: { md: '30%', xs: '80%' },height:'40px' }}
             startAdornment={
               <InputAdornment position="start">
                 <SearchIcon />
@@ -82,19 +82,20 @@ export function ChampsFilter() {
 
       <StyledButtonGroup variant="text" aria-label="text button group" size="large"
         sx={{
+          width:'590px',
           display: 'flex',
           flexWrap: "wrap",
-          justifyContent: 'center',
         }}
       >
         {tags.map(tag => (
           <Button onClick={() => setFilter(tag)}
             key={tag} sx={{
               color: '#fff',
-              fontFamily: "bold-lol",
-              textDecoration: filter === tag && "underline solid #6759e8",
-              textUnderlineOffset: '5px',
-              textDecorationThickness: '3px'
+              fontFamily: "'Nokora', sans-serif",
+              textDecoration: filter === tag && "underline solid #67ACF0",
+              textUnderlineOffset: '13px',
+              textDecorationThickness: '3px',
+              fontSize:'1rem'
             }}>
             {tag}
           </Button>
