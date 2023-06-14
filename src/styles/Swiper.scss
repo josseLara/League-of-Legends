@@ -11,20 +11,36 @@
     --swiper-theme-color: #007aff
 }
 
-.title {
-    font-family: "bold-lol", cursive;
-    margin-bottom: 1rem;
-
-    @include breakpoints(sm) {
-        font-size: 1rem;
-        padding: 0px 30px;   
+.skinSwiper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_title {
+        font-family: 'Nokora', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        @include breakpoints(sm) {
+            font-size: 1rem;
+            padding: 0px 30px;
+        }
+    }
+    p{
+        font-size: 1.9rem;
+        font-weight: 900;
+        display: flex;
+        gap: 10px;
+        span:nth-child(1){
+            color: #000;
+        }
+        span:nth-child(2){
+            color: #01BFB3;
+        }
     }
 }
 
 .swiper-slide img {
-    // display: block;
     width: 100%;
-    // height: 100%;
+
 }
 
 .swiper,

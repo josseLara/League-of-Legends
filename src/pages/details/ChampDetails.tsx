@@ -36,7 +36,7 @@ function ChampDetails() {
       <div id="back-to-top-anchor"></div>
       <div className='champ_details'>
         <div className="champ_details_data" style={{ background: `url(${horizontalImageChamp}${champData[0]?.id}_0.jpg)` }}>
-          <FavButton id={champData[0]?.id} /> 
+          <FavButton id={champData[0]?.id} />
           <BackButton />
           <div className='champ_details_data_lore'>
             <h3>LORE</h3>
@@ -70,26 +70,34 @@ function ChampDetails() {
           </div>
         </div>
       </div>
-      
+
       <div className='champ_spells'>
-            <h3>SPELLS</h3>
-            <Spells
-              passive={champData[0]?.passive?.image?.full}
-              spellQ={champData[0]?.spells[0]?.image?.full}
-              spellW={champData[0]?.spells[1]?.image?.full}
-              spellE={champData[0]?.spells[2]?.image?.full}
-              spellR={champData[0]?.spells[3]?.image?.full}
-              descriptionP={champData[0]?.passive?.description}
-              descriptionQ={champData[0]?.spells[0]?.description}
-              descriptionW={champData[0]?.spells[1]?.description}
-              descriptionE={champData[0]?.spells[2]?.description}
-              descriptionR={champData[0]?.spells[3]?.description}
-              passiveName={champData[0]?.passive?.name}
-              nameQ={champData[0]?.spells[0]?.name}
-              nameW={champData[0]?.spells[1]?.name}
-              nameE={champData[0]?.spells[2]?.name}
-              nameR={champData[0]?.spells[3]?.name}
-            />
+        <h3>SPELLS</h3>
+        <Spells
+          passive={champData[0]?.passive?.image?.full}
+          spellQ={champData[0]?.spells[0]?.image?.full}
+          spellW={champData[0]?.spells[1]?.image?.full}
+          spellE={champData[0]?.spells[2]?.image?.full}
+          spellR={champData[0]?.spells[3]?.image?.full}
+          descriptionP={champData[0]?.passive?.description}
+          descriptionQ={champData[0]?.spells[0]?.description}
+          descriptionW={champData[0]?.spells[1]?.description}
+          descriptionE={champData[0]?.spells[2]?.description}
+          descriptionR={champData[0]?.spells[3]?.description}
+          passiveName={champData[0]?.passive?.name}
+          nameQ={champData[0]?.spells[0]?.name}
+          nameW={champData[0]?.spells[1]?.name}
+          nameE={champData[0]?.spells[2]?.name}
+          nameR={champData[0]?.spells[3]?.name}
+        />
+      </div>
+      <div className='champ_skins'>
+        <h3>SKINS</h3>
+       
+          <SwiperSkins
+            champion={champData[0]?.id}
+            skins={champData[0]?.skins}
+          />
       </div>
       {/* <div className='champ_details_info'>
           <div className='champ_details_info_lore'>
