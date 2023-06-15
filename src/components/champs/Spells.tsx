@@ -74,32 +74,34 @@ export default function Spells({
 
     <Box sx={{display:'flex',flexDirection:'column',gap:'20px'}}>
       <ul className='spells_list'>
-        <li className='spells_item'>
+        <li className={`spells_item ${currentDescription === descriptionP ? "selected" : 'not_selected'}`}>
           <div className='spells_item_skill' onClick={() => handleDescription(descriptionP, passiveName, 'PASSIVE')}>
             <img src={`${passiveImage}${passive}`} alt='passive' />
             <span>Passive</span>
           </div>
         </li>
-        <li className='spells_item' onClick={() => handleDescription(descriptionQ, nameQ, 'Q')}>
+        <li className={`spells_item ${currentDescription === descriptionQ ? "selected" : 'not_selected'}`} onClick={() => handleDescription(descriptionQ, nameQ, 'Q')}>
           <div className='spells_item_skill'>
             <img src={`${spellsImage}${spellQ}`} alt='Q' />
             <span>Q</span>
           </div>
         </li>
-        <li className='spells_item' onClick={() => handleDescription(descriptionW, nameW, 'W')}>
+        <li className={`spells_item ${currentDescription === descriptionW ? "selected" : 'not_selected'}`} onClick={() => handleDescription(descriptionW, nameW, 'W')}>
           <div className='spells_item_skill'>
             <img src={`${spellsImage}${spellW}`} alt='W' />
             <span>W</span>
           </div>
         </li>
 
-        <li className='spells_item'  onClick={() => handleDescription(descriptionE, nameE, 'E')}>
+        <li className={`spells_item ${currentDescription === descriptionE ? "selected" : 'not_selected'}`}
+          onClick={() => handleDescription(descriptionE, nameE, 'E')}>
           <div className='spells_item_skill'>
             <img src={`${spellsImage}${spellE}`} alt='E' />
             <span>E</span>
           </div>
         </li>
-        <li className='spells_item' onClick={() => handleDescription(descriptionR, nameR, 'R')} >
+        <li className={`spells_item ${currentDescription === descriptionR ? "selected" : 'not_selected'}`}
+         onClick={() => handleDescription(descriptionR, nameR, 'R')} >
           <div className='spells_item_skill'>
             <img src={`${spellsImage}${spellR}`} alt='R' />
             <span>R</span>

@@ -6,12 +6,11 @@ import '../../styles/ChampsGrid.scss'
 
 function ChampsGrid(): JSX.Element {
   const champs = useSelector((state: AppStore) => state.champs)
-  console.log('cha',champs)
   return (
     <>
       {champs.length === 0
         ? <div className='no_fav_container'>
-          <img src="/gifs/blitzcrank.gif" height={200} alt="no results gif" />
+          <img src="/img/no-fund.gif" height={200} alt="no results gif" />
           <h2>No results found</h2>
         </div>
         : <>
