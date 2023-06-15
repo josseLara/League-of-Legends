@@ -27,6 +27,7 @@ function Favorites() {
                 image={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${c.id}_0.jpg`}
                 title={c.title}
                 tags={c.tags}
+                info={Object.values(c.info)} 
               />
             )
           })}

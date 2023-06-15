@@ -12,21 +12,23 @@ import "../../styles/Swiper.scss";
 import { Autoplay, EffectFade, Navigation, Pagination, Parallax } from "swiper";
 import { Box } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from '@mui/material/styles';
 
 function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
+    const theme = useTheme();
     const [skinSelected, setSkinSelected] = useState(0);
-
     const handleSlideChange = (swiper: any) => {
         setSkinSelected(swiper.realIndex);
     };
 
-    useEffect(() => {
-        console.log(skinSelected);
-    }, [skinSelected]);
+
 
     return (
         <>
-            <Box sx={{ display: 'flex', gap: '140px',pr:'20px' }}>
+            <Box sx={{ display: 'flex', gap: '140px',pr:'20px',
+             [theme.breakpoints.down('lg')]: {
+                flexDirection: 'column',
+        }, }}>
 
                 <div className='champ_skins_info'>
                     <div className="champ_skins_info_bg1" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected+1}.jpg)` }}></div>
@@ -34,7 +36,7 @@ function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
                 </div>
 
                 <Swiper
-
+                   
                     speed={600}
                     parallax={true}
                     spaceBetween={30}

@@ -11,6 +11,13 @@
     --swiper-theme-color: #007aff
 }
 
+.mySwiper{
+    width: 100vw;
+    height: 90vh;
+    @include breakpoints(sm) {
+        height: 50vh;
+    }
+}
 .skinSwiper {
     display: flex;
     justify-content: space-between;

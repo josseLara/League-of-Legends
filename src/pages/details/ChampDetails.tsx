@@ -35,7 +35,7 @@ function ChampDetails() {
     <div className='home'>
       <div id="back-to-top-anchor"></div>
       <div className='champ_details'>
-        <div className="champ_details_data" style={{ background: `url(${horizontalImageChamp}${champData[0]?.id}_0.jpg)` }}>
+        <div className="champ_details_data" style={{ backgroundImage: `url(${horizontalImageChamp}${champData[0]?.id}_0.jpg)` }}>
           <FavButton id={champData[0]?.id} />
           <BackButton />
           <div className='champ_details_data_lore'>

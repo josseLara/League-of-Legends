@@ -1,16 +1,22 @@
 @import '../styles/index.scss';
 
 .champ_details {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 560px;
-    // min-height: calc(100vh - 92px);
+
 
 
     @include breakpoints(sm) {
         min-height: 100%;
-        margin-top: 55px;
+
+    }
+
+    @media screen and (min-width:790px) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+
     }
 
     &_data {
@@ -18,13 +24,13 @@
         width: 100%;
         height: 90%;
         position: relative;
-        clip-path: polygon(0% 0%, 100% -150%, 0% 1100%);
+        background-size: cover;
 
         .fav-icon {
             position: absolute;
             font-size: 40px;
-            right: 20%;
-            bottom: 0%;
+            right: 2%;
+            bottom: 83%;
         }
 
         .back-icon {
@@ -34,23 +40,38 @@
         }
 
         &_lore {
-            width: 60%;
+            width: 100%;
             position: absolute;
             z-index: 22;
             bottom: -10%;
 
             h3 {
+                font-size: 1.4rem;
                 width: fit-content;
                 padding-left: 9px;
                 background-color: #000;
             }
 
             p {
+                font-size: 1.2rem;
                 font-family: 'Nokora', sans-serif;
                 background-color: #000;
                 padding: 10px 5px;
             }
 
+        }
+
+        @media screen and (min-width:790px) {
+            clip-path: polygon(0% 0%, 100% -150%, 0% 1100%);
+
+            .fav-icon {
+                right: 20%;
+                bottom: 0%;
+            }
+
+            &_lore {
+                width: 70%;
+            }
         }
     }
 
@@ -62,10 +83,12 @@
         position: relative;
         left: -15%;
         top: 2%;
-
+        
         @include breakpoints(sm) {
             height: 260px;
             margin-bottom: 0px;
+            left: 0%;
+            
         }
 
         &_title {
@@ -77,7 +100,7 @@
             align-items: center;
 
             h1 {
-                font-size: 5rem;
+                font-size: 11rem;
                 font-family: 'Nokora', sans-serif;
                 text-transform: uppercase;
             }
@@ -90,12 +113,14 @@
             }
 
             @include breakpoints(sm) {
+                margin-top: 20px;
+
                 h1 {
-                    font-size: 40px;
+                    font-size: 5rem;
                 }
 
                 h2 {
-                    font-size: 18px;
+                    font-size: 20px;
                 }
             }
 
@@ -114,11 +139,13 @@
                 width: auto;
 
                 @include breakpoints(sm) {
-                    height: 25px;
+                    width: 50px;
                 }
             }
 
+
         }
+
     }
 
     // ---
@@ -384,41 +411,52 @@
 }
 
 // skins
-.champ_skins{
+.champ_skins {
     width: 100%;
     height: 100%;
-   
-    h3{
+    margin-top: 90px;
+    
+    h3 {
         font-size: 2.8rem;
         padding-left: 20px;
     }
-    &_info{
+
+    &_info {
         width: 400px;
         display: flex;
         flex-direction: column;
-        gap: 50px;
         padding-left: 10px;
-        &_bg1{
+        gap: 50px;
+        
+        @include breakpoints(sm) {
+            padding-left: 10%;
+            flex-direction: row;
+        }
+
+        
+        &_bg1 {
             width: 200px;
             height: 200px;
             background-repeat: no-repeat;
             background-position: top;
             position: relative;
             top: 10%;
-            &::after{
+
+            &::after {
                 content: '';
                 display: block;
-                width: 200px ;
+                width: 200px;
                 height: 200px;
                 top: 10%;
                 left: 10px;
-                border: 1px solid  #4A397E;
+                border: 1px solid #4A397E;
                 position: absolute;
                 z-index: 1;
             }
-        
+
         }
-        &_bg2{
+
+        &_bg2 {
             width: 200px;
             height: 150px;
             background-repeat: no-repeat;
@@ -426,14 +464,15 @@
             position: relative;
             top: 30%;
             left: 15%;
-            &::after{
+
+            &::after {
                 content: '';
                 display: block;
-                width: 200px ;
+                width: 200px;
                 height: 150px;
                 top: 10%;
                 left: 10px;
-                border: 1px solid  #4A397E;
+                border: 1px solid #4A397E;
                 position: absolute;
                 z-index: 1;
             }

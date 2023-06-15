@@ -35,23 +35,22 @@ function ResponsiveAppBar() {
 
     return (
         <AppBar position="fixed" sx={{ background: 'linear-gradient(70.59deg, #242641 41.09%, #31334B 51.84%, rgba(54, 87, 128, 0.963458) 74.21%, rgba(0, 0, 0, 0) 81.19%, rgba(52, 145, 190, 0.4) 81.19%)' }}>
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
+        
+                <Toolbar>
                     <Typography
                         variant="h6"
                         noWrap
                         onClick={() => navegador('/')}
                         sx={{
-                            mr: 2,
+                            mr: 5,
                             display: { xs: 'none', md: 'flex' },
                             fontWeight: 700,
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
                             cursor: 'pointer',
-                            fontFamily: "regular-lol",
                         }}>
-                        Wiki Lol
+                        JOS-DEV
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -80,7 +79,6 @@ function ResponsiveAppBar() {
                                     <Typography
                                         textAlign="center"
                                         sx={{
-                                            fontFamily: "bold-lol",
                                             textTransform: 'capitalize',
                                             color: '#1a1a1adf'
                                         }}>
@@ -91,7 +89,6 @@ function ResponsiveAppBar() {
                         </Menu>
                     </Box>
 
-                    <KeyboardOutlinedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -104,22 +101,21 @@ function ResponsiveAppBar() {
                             fontWeight: 700,
                             letterSpacing: '.3rem',
                             textDecoration: 'none',
-                            fontFamily: "regular-lol",
                         }}>
-                        PORO.GANK
+                        JOS-DEV
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
                                 onClick={() => { handleCloseNavMenu(); navegador(`/${page}`) }}
-                                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'bold-lol' }}>
+                                sx={{ my: 2, color: 'white', display: 'block' }}>
                                 {page}
                             </Button>
                         ))}
                     </Box>
                 </Toolbar>
-            </Container>
+            
             <ScrollTop children={undefined} />
         </AppBar>
     );
