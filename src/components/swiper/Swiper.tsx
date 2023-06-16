@@ -13,7 +13,8 @@ function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
     const theme = useTheme();
     const [skinSelected, setSkinSelected] = useState(0);
     const handleSlideChange = (swiper: any) => {
-        setSkinSelected(swiper.realIndex);
+        let skin = skins[swiper.realIndex];
+        setSkinSelected(skin.num);
     };
 
 
@@ -26,8 +27,8 @@ function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
         }, }}>
 
                 <div className='champ_skins_info'>
-                    <div className="champ_skins_info_bg1" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected+1}.jpg)` }}></div>
-                    <div className="champ_skins_info_bg2" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected+1}.jpg)` }}></div>
+                    <div className="champ_skins_info_bg1" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected}.jpg)` }}></div>
+                    <div className="champ_skins_info_bg2" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected}.jpg)` }}></div>
                 </div>
 
                 <Swiper
