@@ -10,13 +10,12 @@ import { SwiperSkins } from '../../components/swiper/Swiper';
 import BackButton from '../../components/buttons/BackButton';
 
 function ChampDetails() {
-  const [champData, setChampData] = useState([])
+  const [champData, setChampData] = useState<any>([])
   const { id }: { id?: string } = useParams();
   const [seeMore, setSeeMore] = useState<boolean>(false)
 
   useEffect(() => {
-    getChampData(id).then(data => setChampData(Object.values(data)))
-    console.log('data', champData)
+    getChampData(id ?? '').then(data => setChampData(Object.values(data)))
   }, [id])
 
   const handleSeeMore = () => {

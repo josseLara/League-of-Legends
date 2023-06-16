@@ -1,8 +1,8 @@
-import { MutableRefObject, useEffect, useRef, useState } from 'react'
+import {  useEffect, useRef, useState } from 'react'
 
 function useIntersection(opciones = {}) {
 
-    const elementoRef:  MutableRefObject<HTMLLIElement> = useRef(null)
+    const elementoRef = useRef<HTMLLIElement>(null);
     const [isIntersecting, setIsIntersecting] = useState(false)
 
     useEffect(() => {

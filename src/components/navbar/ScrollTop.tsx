@@ -1,11 +1,6 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
@@ -16,7 +11,7 @@ interface Props {
    * You won't need it on your project.
    */
   window?: () => Window;
-  children: React.ReactElement;
+  children?: React.ReactElement;
 }
 
 export function ScrollTop(props: Props) {

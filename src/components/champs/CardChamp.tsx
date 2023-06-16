@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from 'react';
  */
 function CardChamp({ id, image, title, tags, info }: IChamps): JSX.Element {
 
-    const elementoRef = useRef()
+    const elementoRef = useRef<HTMLLIElement>(null);
     const [isIntersecting, setIsIntersecting] = useState(false)
     let difficulty = parseInt(info[3]) < 3 ? 'LOW' : parseInt(info[3]) < 10 ? 'MODERATE' : 'HIGH';
     useEffect(() => {

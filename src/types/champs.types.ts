@@ -5,4 +5,3 @@ export interface IChamps {
     tags: string[];
     info: string[];
 }
-

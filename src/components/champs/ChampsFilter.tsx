@@ -49,7 +49,7 @@ export function ChampsFilter() {
     },
   });
 
-  const inputRef = React.useRef(null);
+  const inputRef = React.useRef<HTMLInputElement | any>(null);
 
   const theme = createTheme({
     palette: {
@@ -89,10 +89,10 @@ export function ChampsFilter() {
       >
         {tags.map(tag => (
           <Button onClick={() => setFilter(tag)}
-            key={tag} sx={{
+            key={tag} style={{
               color: '#fff',
               fontFamily: "'Nokora', sans-serif",
-              textDecoration: filter === tag && "underline solid #67ACF0",
+              textDecoration:`${filter === tag && "underline solid #67ACF0"}`,
               textUnderlineOffset: '13px',
               textDecorationThickness: '3px',
               fontSize:'1.3rem'
