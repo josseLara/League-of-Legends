@@ -99,44 +99,6 @@ function ChampDetails() {
             skins={champData[0]?.skins}
           />
       </div>
-      {/* <div className='champ_details_info'>
-          <div className='champ_details_info_lore'>
-            <h3>LORE</h3>
-            <p className='champ_details_info_lore_p'>
-              {!seeMore ? champData[0]?.blurb : champData[0]?.lore}
-              <button onClick={handleSeeMore}>
-                {!seeMore ? 'SEE MORE' : 'SEE LESS'}
-              </button>
-            </p>
-          </div>
-          <div className='champ_details_info_spells'>
-            <h3>SPELLS</h3>
-            <Spells
-              passive={champData[0]?.passive?.image?.full}
-              spellQ={champData[0]?.spells[0]?.image?.full}
-              spellW={champData[0]?.spells[1]?.image?.full}
-              spellE={champData[0]?.spells[2]?.image?.full}
-              spellR={champData[0]?.spells[3]?.image?.full}
-              descriptionP={champData[0]?.passive?.description}
-              descriptionQ={champData[0]?.spells[0]?.description}
-              descriptionW={champData[0]?.spells[1]?.description}
-              descriptionE={champData[0]?.spells[2]?.description}
-              descriptionR={champData[0]?.spells[3]?.description}
-              passiveName={champData[0]?.passive?.name}
-              nameQ={champData[0]?.spells[0]?.name}
-              nameW={champData[0]?.spells[1]?.name}
-              nameE={champData[0]?.spells[2]?.name}
-              nameR={champData[0]?.spells[3]?.name}
-            />
-          </div>
-          <div className='champ_details_info_skins'>
-            <h3>SKINS</h3>
-            <SwiperSkins
-              champion={champData[0]?.id}
-              skins={champData[0]?.skins}
-            />
-          </div>
-        </div> */}
     </div>
   )
 }
