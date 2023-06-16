@@ -1,4 +1,4 @@
-# League-of-Legends
+# League of Legends
 
 ## Tecnologias usadas
 [![Typescript](https://img.shields.io/badge/typescript-black?style=for-the-badge&logo=typescript)](https://github.com/josseLara)
