@@ -82,7 +82,7 @@ export function ChampsFilter() {
 
       <StyledButtonGroup variant="text" aria-label="text button group" size="large"
         sx={{
-          width:'590px',
+          width:'100%',
           display: 'flex',
           flexWrap: "wrap",
         }}
@@ -95,7 +95,7 @@ export function ChampsFilter() {
               textDecoration: filter === tag && "underline solid #67ACF0",
               textUnderlineOffset: '13px',
               textDecorationThickness: '3px',
-              fontSize:'1rem'
+              fontSize:'1.3rem'
             }}>
             {tag}
           </Button>

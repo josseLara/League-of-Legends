@@ -1,17 +1,12 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-// import "swiper/css";
 import "swiper/css/effect-fade";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import "../../styles/Swiper.scss";
 
 // import required modules
 import { Autoplay, EffectFade, Navigation, Pagination, Parallax } from "swiper";
 import { Box } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useTheme } from '@mui/material/styles';
 
 function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
@@ -41,8 +36,6 @@ function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
                     parallax={true}
                     spaceBetween={30}
                     effect={"fade"}
-                    // slidesPerView={1}
-                    // loop={true}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,
