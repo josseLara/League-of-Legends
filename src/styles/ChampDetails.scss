@@ -1,8 +1,8 @@
 @import '../styles/index.scss';
 
 .champ_details {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     width: 100%;
     height: 560px;
 
@@ -10,12 +10,8 @@
 
     @include breakpoints(sm) {
         min-height: 100%;
-
-    }
-
-    @media screen and (min-width:790px) {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
+        display: flex;
+        flex-direction: column;
 
     }
 
@@ -46,7 +42,7 @@
             bottom: -10%;
 
             h3 {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
                 width: fit-content;
                 padding-left: 9px;
                 background-color: #000;
@@ -100,7 +96,7 @@
             align-items: center;
 
             h1 {
-                font-size: 11rem;
+                font-size: 9rem;
                 font-family: 'Nokora', sans-serif;
                 text-transform: uppercase;
             }
@@ -228,7 +224,7 @@
         }
 
 
-        
+
     }
 
     .spells-name {
@@ -256,6 +252,7 @@
         }
     }
 }
+
 .spells-name {
     margin-top: 1.3rem;
     text-transform: uppercase;
