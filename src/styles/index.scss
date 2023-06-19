@@ -22,7 +22,22 @@ a {
   cursor: pointer;
 }
 
+.btn-back{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
 
+  .back-icon{
+    position: relative;
+    top: -3px;
+  }
+  &:hover{
+    color: #b59054;
+  }
+}
 ::-webkit-scrollbar {
   width: 10px;
   /* height: 2em;  for horizontal scrollbar*/

@@ -8,14 +8,21 @@ import FavButton from '../../components/buttons/FavButton';
 import Spells from '../../components/champs/Spells';
 import { SwiperSkins } from '../../components/swiper/Swiper';
 import BackButton from '../../components/buttons/BackButton';
+import { getDifficulty } from '../../helpers/champDifficulty';
 
 function ChampDetails() {
   const [champData, setChampData] = useState<any>([])
+  const [difficulty, setDifficulty] = useState<String>('HIGH')
   const { id }: { id?: string } = useParams();
   const [seeMore, setSeeMore] = useState<boolean>(false)
 
   useEffect(() => {
-    getChampData(id ?? '').then(data => setChampData(Object.values(data)))
+    getChampData(id ?? '').then(data => {
+      let champ = Object.values(data);
+      setChampData(champ)
+      console.log(champ)
+      setDifficulty(getDifficulty(champ[0].info.difficulty))
+    })
   }, [id])
 
   const handleSeeMore = () => {
@@ -66,6 +73,34 @@ function ChampDetails() {
                 )
               })}
             </div>
+
+            {/*  */}
+            <div className="champ_details_main_info">
+
+              { champData[0]?.info &&
+                ['ATK', 'DEF', 'MAG'].map((item, index) => {
+             
+                  let num:String[] =  Object.values(champData[0].info) 
+                  return (
+                    <div className="champ_details_main_info_item" key={index}>
+                      <p>{item}</p>
+                      <span>{num[index]}</span>
+                    </div>
+                  )
+                })
+              }
+
+            </div>
+            <div className="champ_details_main_dif">
+              {/* <p>DIFFICULTY</p> */}
+              <div className='champ_details_main_dif_lines'>
+                <span className="line"></span>
+                <span className={`line ${difficulty == 'LOW' ? 'inactive' : ''}`}></span>
+                <span className={`line ${difficulty == 'MODERATE' || difficulty == 'LOW' ? 'inactive' : ''}`}></span>
+              </div>
+              <span>{difficulty}</span>
+            </div>
+
           </div>
         </div>
       </div>
@@ -92,11 +127,11 @@ function ChampDetails() {
       </div>
       <div className='champ_skins'>
         <h3>SKINS</h3>
-       
-          <SwiperSkins
-            champion={champData[0]?.id}
-            skins={champData[0]?.skins}
-          />
+
+        <SwiperSkins
+          champion={champData[0]?.id}
+          skins={champData[0]?.skins}
+        />
       </div>
     </div>
   )

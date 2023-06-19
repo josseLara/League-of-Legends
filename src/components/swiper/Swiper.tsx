@@ -29,6 +29,7 @@ function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
                 <div className='champ_skins_info'>
                     <div className="champ_skins_info_bg1" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected}.jpg)` }}></div>
                     <div className="champ_skins_info_bg2" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected}.jpg)` }}></div>
+                    <div className="champ_skins_info_bg3" style={{ backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${skinSelected}.jpg)` }}></div>
                 </div>
 
                 <Swiper
