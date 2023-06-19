@@ -9,6 +9,7 @@ import Spells from '../../components/champs/Spells';
 import { SwiperSkins } from '../../components/swiper/Swiper';
 import BackButton from '../../components/buttons/BackButton';
 import { getDifficulty } from '../../helpers/champDifficulty';
+import { IChamps, IChampsInfo } from '../../types/champs.types';
 
 function ChampDetails() {
   const [champData, setChampData] = useState<any>([])
@@ -18,9 +19,8 @@ function ChampDetails() {
 
   useEffect(() => {
     getChampData(id ?? '').then(data => {
-      let champ = Object.values(data);
+      let champ:IChamps[]= Object.values(data);
       setChampData(champ)
-      console.log(champ)
       setDifficulty(getDifficulty(champ[0].info.difficulty))
     })
   }, [id])
