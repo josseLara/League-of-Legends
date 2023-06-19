@@ -16,7 +16,7 @@
 
 
 ## Demo
-link-demo: https://league-of-legends-theta.vercel.app/ 
+link-demo: [https://league-of-legends-theta.vercel.app/ ](https://league-of-legends-azure.vercel.app/)
 
 ## Images
 
