@@ -24,5 +24,6 @@ link-demo: https://league-of-legends-theta.vercel.app/
 ![image](https://github.com/josseLara/League-of-Legends/assets/99273526/7a87b268-7b7b-42aa-b0ba-331f69a27f80)
 
 ### detail
-![image](https://github.com/josseLara/League-of-Legends/assets/99273526/a21292e6-3ce8-4a43-b83b-51abd486e2b0)
+![image](https://github.com/josseLara/League-of-Legends/assets/99273526/ee0ded00-3a65-4d5f-8900-fd9de4a6a6b7)
+
 
