@@ -3,14 +3,6 @@ export interface IChamps {
     title: string;
     image: string;
     tags: string[];
-    info: IChampsInfo;
+    info: string[];
 }
 
-export interface IChampsInfo {
-    
-        attack: string
-        defense: string
-        difficulty: string
-        magic: string
-  
-}
