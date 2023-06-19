@@ -29,7 +29,7 @@
             bottom: 83%;
         }
 
-     
+
 
         &_lore {
             width: 100%;
@@ -75,7 +75,7 @@
         position: relative;
         left: -15%;
         top: 2%;
-        
+
         @include breakpoints(sm) {
             height: 350px;
             margin-bottom: -130px;
@@ -90,6 +90,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             h1 {
                 font-size: 9rem;
                 font-family: 'Nokora', sans-serif;
@@ -137,22 +138,25 @@
 
         }
 
-        &_info{
+        &_info {
             display: flex;
             flex-wrap: wrap;
             gap: 50px;
             align-items: center;
             margin: 30px 0px;
-            &_item{
+
+            &_item {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                p{
+
+                p {
                     font-size: 1.2rem;
 
                 }
-                span{
+
+                span {
                     font-size: 1.4rem;
                     font-weight: 700;
                     background-color: #000;
@@ -160,39 +164,42 @@
                 }
             }
         }
-        &_dif{
+
+        &_dif {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            
-            
-            span{
+
+
+            span {
                 font-size: 1.1rem;
                 color: #D0A85C;
                 z-index: 1;
             }
-            &_lines{
+
+            &_lines {
                 width: 50px;
                 display: flex;
                 align-items: center;
                 gap: 5px;
                 justify-content: center;
 
-                .line{
+                .line {
                     width: 35px;
                     height: 35px;
                     transform: skew(-45deg);
                     background-color: #08D7F7;
                 }
-                .inactive{
+
+                .inactive {
                     background-color: #023240;
                 }
-            }  
+            }
         }
 
     }
-    
+
 }
 
 .champ_spells {
@@ -250,7 +257,7 @@
                 padding: 10px;
                 margin-top: 20px;
                 border: 1px solid transparent;
- 
+
                 span {
                     font-weight: 600;
                     padding: 7px 5px 3px 5px;
@@ -382,6 +389,10 @@
                 z-index: 1;
             }
 
+            @include breakpoints(sm) {
+                left: 90%;
+                top: 40%;
+            }
         }
 
         &_bg2 {
@@ -404,26 +415,39 @@
                 position: absolute;
                 z-index: 1;
             }
+            @include breakpoints(sm) {
+                left: 60%;
+            }
         }
 
         &_bg3 {
-            width: 300px;
+
+            width: 290px;
             height: 250px;
             background-size: contain;
             background-repeat: no-repeat;
             position: relative;
-            top: 25%;
-            left: 35%;
+            top: 20%;
+            left: 5%;
+
             &::after {
                 content: '';
                 display: block;
                 width: 300px;
                 height: 200px;
                 top: 10px;
-                left: 15px;
+
                 border: 1px solid #4A397E;
                 position: absolute;
                 z-index: 1;
+            }
+
+            @include breakpoints(sm) {
+                width: 300px;
+                height: 250px;
+                position: absolute;
+                top: auto;
+                left: 15px;
             }
         }
     }
