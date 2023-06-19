@@ -5,10 +5,24 @@
 [![HTML5](https://img.shields.io/badge/html5-black?style=for-the-badge&logo=html5)](https://hub.docker.com/u/josseLara)
 [![CSS3](https://img.shields.io/badge/css3-black?style=for-the-badge&logo=css3)](https://hub.docker.com/u/josseLara)
 [![SASS](https://img.shields.io/badge/sass-black?style=for-the-badge&logo=sass)](https://github.com/wervlad)
+[![MUI](https://img.shields.io/badge/mui-black?style=for-the-badge&logo=mui)](https://github.com/wervlad)
 [![React](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react)](https://github.com/josseLara)
 [![React Router](https://img.shields.io/badge/reactrouter-black?style=for-the-badge&logo=reactrouter)](https://github.com/josseLara)
 [![Redux](https://img.shields.io/badge/redux-black?style=for-the-badge&logo=redux)](https://github.com/josseLara)
-[![Jest](https://img.shields.io/badge/jest-black?style=for-the-badge&logo=jest)](https://github.com/josseLara)
+[![Vitest](https://img.shields.io/badge/vitest-black?style=for-the-badge&logo=vitest)](https://github.com/josseLara)
 [![Testing Library](https://img.shields.io/badge/testinglibrary-black?style=for-the-badge&logo=testinglibrary)](https://github.com/josseLara)
 [![Vercel](https://img.shields.io/badge/vercel-black?style=for-the-badge&logo=vercel)](https://github.com/josseLara)
 [![Vite](https://img.shields.io/badge/vite-black?style=for-the-badge&logo=vite)](https://github.com/josseLara)
+
+
+## Demo
+link-demo: https://league-of-legends-theta.vercel.app/ 
+
+## Images
+
+### index
+![image](https://github.com/josseLara/League-of-Legends/assets/99273526/7a87b268-7b7b-42aa-b0ba-331f69a27f80)
+
+### detail
+![image](https://github.com/josseLara/League-of-Legends/assets/99273526/a21292e6-3ce8-4a43-b83b-51abd486e2b0)
+
