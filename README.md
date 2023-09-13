@@ -21,9 +21,6 @@ link-demo: [https://league-of-legends-theta.vercel.app/ ](https://league-of-lege
 ## Images
 
 ### index
-![image](https://github.com/josseLara/League-of-Legends/assets/99273526/7a87b268-7b7b-42aa-b0ba-331f69a27f80)
-
-### detail
-![image](https://github.com/josseLara/League-of-Legends/assets/99273526/ee0ded00-3a65-4d5f-8900-fd9de4a6a6b7)
 
 
+![Uploading Opera Captura de pantalla_2023-09-13_111415_league-of-legends-azure.vercel.app.png…]()
