@@ -23,4 +23,4 @@ link-demo: [https://league-of-legends-theta.vercel.app/ ](https://league-of-lege
 ### index
 
 
-![Uploading Opera Captura de pantalla_2023-09-13_111415_league-of-legends-azure.vercel.app.png…]()
+![Opera Captura de pantalla_2023-09-13_111415_league-of-legends-azure vercel app](https://github.com/josseLara/League-of-Legends/assets/99273526/63811c97-68c5-4b8d-a569-27d2ffabeddc)
